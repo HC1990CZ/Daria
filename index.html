@@ -147,7 +147,7 @@
 
 
 
-        /* Fondos personalizados para cada sección */
+        /* Fondos personalizados para cada sección 
         #seccion1::before {
             background-image: url('fondo1.jpg');
         }  
@@ -158,15 +158,15 @@
 
         #seccion3::before {
             background-image: url('fondo3.jpg');
-        }
+        }   */
 
         #seccion4::before {
             background-image: url('fondo4.jpg');
-        }
+        } 
 
-        #seccion5::before {
+       /* #seccion5::before {
             background-image: url('fondo5.jpg');
-        }
+        } */
 
         section h2 {
             margin: 0;
@@ -174,6 +174,7 @@
             opacity: 0;
             transform: translateY(50px);
             transition: opacity 1s ease, transform 1s ease;
+	     z-index: 2;
         }
 
         section p {
@@ -182,6 +183,7 @@
             opacity: 0;
             transform: translateY(50px);
             transition: opacity 1s ease, transform 1s ease;
+	     z-index: 2;
         }
 
         /* Animación al hacer scroll */
@@ -191,7 +193,7 @@
             transform: translateY(0);
         }
 
-        footer {
+       /* footer {
             background-color: #333;
             color: white;
             text-align: center;
@@ -199,7 +201,7 @@
             position: fixed;
             bottom: 60px;
             width: 100%;
-        }
+        } */
 
         .botones-fijos {
             position: fixed;
@@ -373,6 +375,155 @@
 
 
 
+
+
+
+/* Estilos para la sección 2 */
+#seccion2 {
+    position: relative;
+    overflow: hidden; /* Oculta el desbordamiento de las imágenes */
+}
+
+/* Fondo de la sección 2 (imagen JPG) */
+#seccion2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('fondo2.jpg'); /* Cambia a una imagen diferente */
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Coloca el fondo detrás del contenido */
+    transform: translateZ(-1px) scale(1.2); /* Efecto parallax */
+}
+
+/* Imagen al frente (imagen PNG) */
+.imagen-frente2 {
+    position: absolute;
+    bottom: 300px; /* Ajusta la posición vertical */
+    left: 50%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Centra exactamente */
+    width: 400px; /* Ajusta el tamaño de la imagen */
+    z-index: 1; /* Coloca la imagen detrás del contenido */
+    transition: transform 0.5s ease-out; /* Suaviza el movimiento */
+}
+
+/* Contenido de la sección 2 */
+.contenido2 {
+    position: relative;
+    z-index: 2; /* Asegura que el contenido esté por encima de las imágenes */
+    text-align: center;
+    color: white; /* Cambia el color del texto para que sea legible */
+}
+
+.contenido2 h2 {
+    position: relative;
+    top: 20px; /* Ajusta la posición vertical */
+    color: white; /* Color del texto */
+    text-shadow: 8px 8px 12px rgba(0, 0, 0, 9); /* Sombra suave */
+    -webkit-text-stroke: 0.5px #2a3e83; /* Contorno de 0.5px de color negro */
+}
+.contenido2 h1 {
+    color: white; /* Color del texto */
+    text-shadow: 8px 8px 12px rgba(0, 0, 0, 9); /* Sombra suave */
+    -webkit-text-stroke: 0.5px #2a3e83; /* Contorno de 0.5px de color negro */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos para la sección 3 */
+#seccion3 {
+    position: relative;
+    overflow: hidden; /* Oculta el desbordamiento de las imágenes */
+}
+
+/* Fondo de la sección 2 (imagen JPG) */
+#seccion3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('fondo3.jpg'); /* Cambia a una imagen diferente */
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Coloca el fondo detrás del contenido */
+    transform: translateZ(-1px) scale(1.2); /* Efecto parallax */
+}
+
+/* Imagen al frente (imagen PNG) */
+.imagen-frente3 {
+    position: absolute;
+    bottom: 300px; /* Ajusta la posición vertical */
+    left: 50%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Centra exactamente */
+    width: 400px; /* Ajusta el tamaño de la imagen */
+    z-index: 1; /* Coloca la imagen detrás del contenido */
+    transition: transform 0.5s ease-out; /* Suaviza el movimiento */
+}
+
+/* Contenido de la sección 2 */
+.contenido3 {
+    position: relative;
+    z-index: 2; /* Asegura que el contenido esté por encima de las imágenes */
+    text-align: center;
+    color: white; /* Cambia el color del texto para que sea legible */
+}
+
+.contenido3 h2 {
+    position: relative;
+    top: 20px; /* Ajusta la posición vertical */
+    color: white; /* Color del texto */
+    text-shadow: 8px 8px 12px rgba(0, 0, 0, 9); /* Sombra suave */
+    -webkit-text-stroke: 0.5px #2a3e83; /* Contorno de 0.5px de color negro */
+}
+.contenido3 h1 {
+    color: white; /* Color del texto */
+    text-shadow: 8px 8px 12px rgba(0, 0, 0, 9); /* Sombra suave */
+    -webkit-text-stroke: 0.5px #2a3e83; /* Contorno de 0.5px de color negro */
+}
+
+
+
+
+
+
+
+
+/* Estilos para el botón de WhatsApp */
+.boton-whatsapp {
+    display: inline-block;
+    background-color: #25d366; /* Color de WhatsApp */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.boton-whatsapp:hover {
+    background-color: #128c7e; /* Color de WhatsApp (hover) */
+}
+
+
+
+
+
+
+
 #contador {
     display: flex;
     justify-content: center;
@@ -395,6 +546,57 @@
     font-size: 2rem;
     font-weight: bold;
 }
+
+
+
+
+
+
+
+/* Estilos para el carrusel */
+.carrusel {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.carrusel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrusel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carrusel-item img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Animación automática */
+@keyframes carrusel-automatico {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    100% { transform: translateX(0); }
+}
+
+.carrusel-inner {
+    animation: carrusel-automatico 12s infinite;
+}
+
+
+
+
+
     </style>
 </head>
 <body>
@@ -455,34 +657,81 @@
         <img src="bebe.png" alt="Imagen al frente" class="imagen-frente">
     </section>
 
+<section id="seccion2">
+    <div class="contenido2">
+        <h2>Fecha: </h2>
+        <h1>Domingo 23 de marzo</h1>
 
-            <section id="seccion2">
-                <h2>Sección 2</h2>
-                <p>Contenido de la sección 2. Sigue explorando.</p>
-            </section>
-            <section id="seccion3">
-                <h2>Sección 3</h2>
-                <p>Contenido de la sección 3. ¡Aún hay más!</p>
-            </section>
-            <section id="seccion4">
-                <h2>Sección 4</h2>
-                <p>Contenido de la sección 4. ¡No te detengas!</p>
-            </section>
+	<h2>Hora: </h2>
+        <h1>05:00 pm</h1>
+
+	<h2>Lugar: </h2>
+        <h1>Pupuseria Los Arana</h1>
+    </div>
+    <img src="smoke-02.png" alt="Imagen al frente2" class="imagen-frente2">
+</section>
+
+
+          
+<section id="seccion3">
+    <div class="contenido3">
+        <h2></h2>
+        <p></p>
+        <!-- Botón de WhatsApp -->
+        <a href="https://wa.me/+50236918128?text=Hola,%20confirmo%20mi%20asistencia%20al%20evento.%20¡Nos%20vemos%20allí!" 
+           target="_blank" 
+           class="boton-whatsapp">
+            Confirmar asistencia
+        </a>
+    </div>
+   <img src="smoke-01.png" alt="Imagen al frente3" class="imagen-frente3">
+</section>
+
+
+
+<section id="seccion4">
+    <div class="contenido4">
+        <h2></h2>
+        <p></p>
+        <!-- Carrusel de fotos -->
+        <div class="carrusel">
+            <div class="carrusel-inner">
+                <div class="carrusel-item">
+                    <img src="foto1.jpg" alt="Foto 1">
+                </div>
+                <div class="carrusel-item">
+                    <img src="foto2.jpeg" alt="Foto 2">
+                </div>
+                <div class="carrusel-item">
+                    <img src="foto3.jpeg" alt="Foto 3">
+                </div>
+                <div class="carrusel-item">
+                    <img src="foto4.jpeg" alt="Foto 4">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- seccion 5 o mas
             <section id="seccion5">
                 <h2>Sección 5</h2>
                 <p>Contenido de la sección 5. ¡Llegaste al final!</p>
-            </section>
-        </main>
+            </section>   -->
+        
+</main>
 
-        <!-- Barra de botones fijos -->
+        <!-- Barra de botones fijos 
         <div class="botones-fijos">
             <button onclick="irASeccion('seccion1')">Inicio</button>
             <button onclick="irASeccion('seccion2')">Buscar</button>
             <button onclick="irASeccion('seccion3')">Perfil</button>
             <button onclick="irASeccion('seccion4')">Config</button>
             <button onclick="irASeccion('seccion5')">Ayuda</button>
-        </div>
-    </div>
+        </div> -->
 
     <!-- Botón de confeti -->
     <button class="boton-confeti" onclick="lanzarConfetiBoton()">🎉 Lanzar Confeti</button>
@@ -657,7 +906,16 @@
             });
         }
 
-        // Función para detectar el scroll y activar animaciones
+     
+
+
+
+
+
+
+
+
+  // Función para detectar el scroll y activar animaciones
         function handleScroll() {
             const secciones = document.querySelectorAll('section');
             secciones.forEach(seccion => {
@@ -678,14 +936,55 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// parallax seccion1
 window.addEventListener('scroll', function () {
     const seccion1 = document.getElementById('seccion1');
     const imagenFrente = document.querySelector('.imagen-frente');
     const scrollY = window.scrollY;
 
     // Ajusta la posición de la imagen PNG en función del scroll
-    imagenFrente.style.transform = `translateX(-50%) translateY(${scrollY * 0.5}px)`;
+    imagenFrente.style.transform = `translateX(-50%) translateY(${scrollY * 0.6}px)`;
 });
+
+// parallax seccion2
+window.addEventListener('scroll', function () {
+    const seccion2 = document.getElementById('seccion2');
+    const imagenFrente2 = document.querySelector('.imagen-frente2');
+    const scrollY = window.scrollY;
+
+    // Ajusta la posición de la imagen PNG en función del scroll
+    const parallaxOffset = scrollY * 0.3; // Ajusta la velocidad del parallax
+    imagenFrente2.style.transform = `translateX(-50%) translateY(${parallaxOffset}px)`;
+});
+
+// parallax seccion3
+window.addEventListener('scroll', function () {
+    const seccion3 = document.getElementById('seccion3');
+    const imagenFrente3 = document.querySelector('.imagen-frente3');
+    const scrollY = window.scrollY;
+
+    // Ajusta la posición de la imagen PNG en función del scroll
+    const parallaxOffset = scrollY * 0.2; // Ajusta la velocidad del parallax
+    imagenFrente3.style.transform = `translateX(-50%) translateY(${parallaxOffset}px)`;
+});
+
+
+
+
 
 // Fecha del evento (23 de marzo)
 const fechaEvento = new Date('2025-03-23T00:00:00');
